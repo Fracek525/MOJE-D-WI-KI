@@ -1,0 +1,87 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="800" Height="450"
+        Background="#2E8B57"
+        x:Class="Mojedzwieki.MainWindow"
+        Title="Moje dźwięki wykonał: 00000000000">
+        
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                        *
+                </Grid.RowDefinitions>
+                
+                
+                <StackPanel>
+                                <Image Source="avares://Mojedzwieki/Assets/obraz3.png" 
+                                       Height="100" 
+                                       Width="100" 
+                                       Margin="0,180,150,0"
+                                       PointerPressed="Previous"/>
+                </StackPanel>
+                
+                <StackPanel Grid.Column="2">
+                        <Image Source="avares://Mojedzwieki/Assets/obraz2.png" 
+                               Height="100" 
+                               Width="100" 
+                               Margin="150,180,0,0"
+                               PointerPressed="Next"/>
+                        
+                        <TextBlock x:Name="bandName"
+                                   Margin="-150,-220,0,0"
+                                   FontSize="50"
+                                   Foreground="White">Band_name
+                        </TextBlock>
+                        
+                        <TextBlock x:Name="title"
+                                   Margin="-150,-150,0,0"
+                                   FontSize="30"
+                                   Foreground="White"
+                                   FontStyle="Oblique">title
+                        </TextBlock>
+                        
+                        <TextBlock x:Name="trackCount"
+                                   Margin="-150,-80,0,0"
+                                   FontSize="20"
+                                   Foreground="#61D918">Track_count
+                        </TextBlock>
+                        
+                        <TextBlock x:Name="releaseDate"
+                                   Margin="0,-80,0,0"
+                                   FontSize="20"
+                                   Foreground="#61D918">Release_date
+                        </TextBlock>
+                        
+                        <TextBlock x:Name="downloads"
+                                   Margin="-380,80,0,0"
+                                   Foreground="#61D918"
+                                   FontSize="20">
+                                downloads
+                        </TextBlock>
+                        
+                        <Button Click="Download"
+                                Margin="-250,-30,0,0"
+                                Width="90"
+                                Background="#61D918"
+                                FontWeight="Bold"
+                                Foreground="Black"
+                                CornerRadius="0">
+                                Pobierz
+                        </Button>
+                        
+                </StackPanel>
+                
+                <StackPanel Grid.Column="1">
+                        <Image Source="avares://Mojedzwieki/Assets/obraz.png" 
+                               Height="250" 
+                               Margin="-300,40,0,0"/>
+                </StackPanel>
+        </Grid>
+</Window>
